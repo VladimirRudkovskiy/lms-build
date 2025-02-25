@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { BookMarkedIcon, BookOpen } from 'lucide-react'
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 import { Button } from './ui/button'
+import SearchInput from './SearchInput'
 
 
 function Header() {
@@ -22,6 +23,8 @@ function Header() {
 									.JS Starter
 								</span>
 							</Link>
+
+							<SearchInput />
 						</div>
 
 							{/* Right */}
