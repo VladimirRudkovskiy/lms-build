@@ -10,7 +10,6 @@ export default async function SearchPage({
 	const { query } = await searchParams;
 	const decodedTerm = decodeURIComponent(query);
 	const courses = await searchCourses(query);
-	console.log(courses);
 
 	return (
 		<div className="h-full pt-16">
