@@ -1,5 +1,6 @@
 'use client'
 
+import { createStripeCheckout } from "@/actions/createStripeCheckout";
 import { useUser } from "@clerk/nextjs";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
@@ -41,10 +42,10 @@ function EnrollButton({
 			<Link
 			prefetch={false}
 			href={`/dashboard/courses/${courseId}`}
-			className="w-full rounded-lg px-6 py-3 font-medium bg-gradient-to-r from-green-500 to  emerald-500 text-white hover:from-green-600 hover:to-emerald-600 transition-all duration-300 h-12 flex items-center justify-center gap-2 group"
+			className="w-full rounded-lg px-6 py-3 font-medium bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600 transition-all duration-300 h-12 flex items-center justify-center gap-2 group"
 			>
 			<span>Access Course</span>
-			<CheckCircle className="2-5 h-5 group-hover:scale-110 transition-transform"/>
+			<CheckCircle className="w-5 h-5 group-hover:scale-110 transition-transform"/>
 			</Link>
 		)
 	}
@@ -71,7 +72,7 @@ function EnrollButton({
 
 			{isPending && (
 				<div className="absolute inset-0 flex items-center justify-center">
-					<div className="2-5 h-5 border-2 border-gray-400 bprder-t-gray-600 rounded-full animate-spin">
+					<div className="w-5 h-5 border-2 border-gray-400 border-t-gray-600 rounded-full animate-spin">
 
 					</div>
 				</div>
