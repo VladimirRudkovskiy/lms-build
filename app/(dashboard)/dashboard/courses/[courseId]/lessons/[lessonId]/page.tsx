@@ -1,3 +1,4 @@
+import { LoomEmbed } from "@/components/LoomEmbed";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { getLessonById } from "@/sanity/lib/lessons/getLessonById";
 import { currentUser } from "@clerk/nextjs/server";
@@ -35,7 +36,7 @@ async function LessonPage({ params }: LessonPageProps) {
             {lesson.videoUrl && <VideoPlayer url={lesson.videoUrl} />}
 
             {/* Loom Embed Video if loomUrl is provided */}
-            {/* {lesson.loomUrl && <LoomEmbed shareUrl={lesson.loomUrl} />} */}
+            {lesson.loomUrl && <LoomEmbed shareUrl={lesson.loomUrl} />}
 
             {/* Lesson Content */}
             {lesson.content && (
