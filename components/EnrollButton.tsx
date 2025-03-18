@@ -62,7 +62,7 @@ function EnrollButton({
 		>
 			{!user?.id ? (
 				<span className={`${isPending ? "opacity-0" : "opacity-100"}`}>
-					Sign in toEnroll
+					Sign in to Enroll
 				</span>
 			) : (
 				<span className={`${isPending ? "opacity-0" : "opacity-100"}`}>
