@@ -15,7 +15,7 @@ function EnrollButton({
   isEnrolled: boolean;
 }) {
 
-	const { user, isLoaded: isUserLoaded } = useUser();
+	const { user } = useUser();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
